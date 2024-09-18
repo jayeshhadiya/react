@@ -1,0 +1,58 @@
+.header {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center items horizontally for all sizes */
+    align-items: center;
+    flex-direction: column; /* Stack vertically by default */
+}
+
+.nav {
+    display: flex;
+    justify-content: center; /* Ensure the nav itself is centered */
+    width: 100%;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Align items vertically */
+    flex-direction: row; /* Layout items in a row for medium and larger devices */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.nav-item {
+    margin: 0 20px; /* Spacing between items */
+}
+
+.nav-item a {
+    color: #fff; /* Light link text */
+    text-decoration: none;
+    display: block; /* Makes the entire area clickable */
+    padding: 10px; /* More clickable area */
+}
+
+/* Media Query for Tablet and Mobile Screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-items {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Space between items vertically */
+    }
+}
+
+/* Additional Media Query for Phones */
+@media (max-width: 480px) {
+    .nav-item a {
+        padding: 15px; /* Larger touch targets on very small screens */
+    }
+}
